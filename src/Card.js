@@ -7,7 +7,6 @@ function Card({ index }){
         window.open(player.link, '_blank');
     };
 
-
     return(
         <div className={"bg-light-yellow hover-bg-gold dib br3 pa3 ma2 grow bw2 shadow-5"} onClick={handleClick}>
             <div>
