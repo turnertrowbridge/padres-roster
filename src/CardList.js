@@ -1,15 +1,14 @@
 import Card from "./Card";
-import {players} from "./players";
 
-function CardList() {
+function CardList({ players }) {
     return (
         <>
             {
-                players.map((player, index) => {
+                players.map((player, id) => {
                     return(
                         <Card
-                        key={index}
-                        index={index}
+                            key={id}
+                            player={player}
                         />
                     );
                 })

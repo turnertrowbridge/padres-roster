@@ -1,8 +1,4 @@
-import {players} from './players.js';
-
-function Card({ index }){
-    const player = players[index];
-
+function Card({ player }){
     const handleClick = () => {
         window.open(player.link, '_blank');
     };
