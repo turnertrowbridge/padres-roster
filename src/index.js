@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import Card from "./Card";
+import App from './App.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <div>
-          <Card index={0}/>
-          <Card index={1}/>
-          <Card index={2}/>
+            <App/>
       </div>
   </React.StrictMode>
 );
