@@ -1,7 +1,6 @@
 import Card from "./Card";
-import {players} from "./players";
 
-function CardList() {
+function CardList({ players }) {
     return (
         <>
             {
