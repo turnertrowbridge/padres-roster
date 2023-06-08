@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox"
-import {players} from "./players";
-import Scroll from "./Scroll";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox"
+import {players} from "../components/players";
+import Scroll from "../components/Scroll";
 import "./App.css"
 
 class App extends Component{
@@ -19,9 +19,11 @@ class App extends Component{
     }
 
     render() {
-        const filteredPlayers = this.state.players.filter(players =>{
-            return players.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+        const { players, searchField } = this.state;
+        const filteredPlayers = players.filter(player =>{
+            return player.name.toLowerCase().includes(searchField.toLowerCase());
         });
+
         return (
             <div className='tc'>
                 <h1 className='f1'>2022-2023 Padres Roster</h1>
