@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox"
 import {players} from "./players";
+import "./App.css"
 
 class App extends Component{
     constructor(props) {
@@ -22,7 +23,7 @@ class App extends Component{
         });
         return (
             <div className='tc'>
-                <h1>2022-2023 Padres Roster</h1>
+                <h1 className='f1'>2022-2023 Padres Roster</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <CardList players={filteredPlayers}/>
             </div>
