@@ -3,6 +3,7 @@ import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox"
 import {players} from "../components/players";
 import Scroll from "../components/Scroll";
+import ErrorBoundary from "../components/ErrorBoundary";
 import "./App.css"
 
 class App extends Component{
@@ -29,7 +30,9 @@ class App extends Component{
                 <h1 className='f1'>2022-2023 Padres Roster</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
-                    <CardList players={filteredPlayers}/>
+                    <ErrorBoundary>
+                        <CardList players={filteredPlayers}/>
+                    </ErrorBoundary>
                 </Scroll>
             </div>
         );
