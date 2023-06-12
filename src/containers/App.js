@@ -34,7 +34,6 @@ class App extends Component{
         const { roster, searchField, isFetchingRoster } = this.state;
 
         if (isFetchingRoster) {
-            return <div>Loading...</div>; // Show a loading indicator while fetching roster
         }
 
         const filteredRoster = roster.filter(player =>{
