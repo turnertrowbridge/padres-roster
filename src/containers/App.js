@@ -1,18 +1,29 @@
 import React, {Component} from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox"
-import {players} from "../components/players";
 import Scroll from "../components/Scroll";
 import ErrorBoundary from "../components/ErrorBoundary";
+import fetchRoster from "../components/roster-fetch";
 import "./App.css"
 
 class App extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            players: players,
-            searchField: ''
+            roster: [],
+            searchField: '',
+            isFetchingRoster: true,
         }
+    }
+
+    componentDidMount() {
+        fetchRoster()
+            .then(roster => {
+                this.setState({ roster: roster, isFetchingRoster: false });
+            })
+            .catch(error => {
+                console.log('Error fetching roster:', error);
+            });
     }
 
      onSearchChange = (event) => {
@@ -20,18 +31,23 @@ class App extends Component{
     }
 
     render() {
-        const { players, searchField } = this.state;
-        const filteredPlayers = players.filter(player =>{
-            return player.name.toLowerCase().includes(searchField.toLowerCase());
-        });
+        const { roster, searchField, isFetchingRoster } = this.state;
 
+        if (isFetchingRoster) {
+            return <div>Loading...</div>; // Show a loading indicator while fetching roster
+        }
+
+        const filteredRoster = roster.filter(player =>{
+            const fullName = player.fullName || "";
+            return fullName.toLowerCase().includes(searchField.toLowerCase());
+        });
         return (
             <div className='tc'>
                 <h1 className='f1'>2022-2023 Padres Roster</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
                     <ErrorBoundary>
-                        <CardList players={filteredPlayers}/>
+                        <CardList roster={filteredRoster}/>
                     </ErrorBoundary>
                 </Scroll>
             </div>

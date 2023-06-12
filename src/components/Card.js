@@ -1,19 +1,20 @@
-function Card({ player }){
+function Card( {id, fullName, primaryNumber, primaryPosition, currentAge, height, weight, status, batAndPitchSide, link} ){
     const handleClick = () => {
-        window.open(player.link, '_blank');
+        window.open(link, '_blank');
     };
 
     return(
         <div className={"bg-light-yellow hover-bg-gold dib br3 pa3 ma2 grow bw2 shadow-5"} onClick={handleClick}>
             <div>
-                <img alt={player.image.alt} src={player.image.src} />
-                <h2>{player.name}</h2>
-                <p>Number: {player.number}</p>
-                <p>Position: {player.position}</p>
-                <p>B/T: {player.b_t}</p>
-                <p>Height: {player.height}</p>
-                <p>Weight: {player.weight}</p>
-                <p>Age: {player.age}</p>
+                {/*<img alt={link.image.alt} src= {link.image.src} />*/}
+                <h2>{fullName}</h2>
+                <p># {primaryNumber}</p>
+                <p>Position: {primaryPosition}</p>
+                <p>Age: {currentAge}</p>
+                <p>B/T: {batAndPitchSide}</p>
+                <p>Height: {height}</p>
+                <p>Weight: {weight}</p>
+                <p>Status: {status}</p>
             </div>
         </div>
     );
