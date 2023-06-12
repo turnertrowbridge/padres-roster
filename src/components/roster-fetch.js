@@ -20,7 +20,7 @@ function fetchRoster() {
                             height: player.height,
                             weight: player.weight,
                             status: player.active ? "Active" : "Inactive",
-                            link: ""
+                            nameSlug: player.nameSlug,
                         }
                         return newPlayer;
                     })
