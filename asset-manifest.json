@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/padres-roster/static/css/main.795e3089.css",
+    "main.js": "/padres-roster/static/js/main.515020a4.js",
+    "static/js/787.fa17bf70.chunk.js": "/padres-roster/static/js/787.fa17bf70.chunk.js",
+    "index.html": "/padres-roster/index.html",
+    "main.795e3089.css.map": "/padres-roster/static/css/main.795e3089.css.map",
+    "main.515020a4.js.map": "/padres-roster/static/js/main.515020a4.js.map",
+    "787.fa17bf70.chunk.js.map": "/padres-roster/static/js/787.fa17bf70.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.795e3089.css",
+    "static/js/main.515020a4.js"
+  ]
+}
