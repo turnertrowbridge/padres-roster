@@ -31,12 +31,4 @@ function fetchRoster() {
         .catch(() => console.log('Roster Data Fetch Error'));
 }
 
-// fetchRoster()
-//     .then(roster => {
-//         console.log(roster);
-//     })
-//     .catch(error => {
-//         console.log('Error fetching roster:', error);
-//     });
-
 export default fetchRoster;
