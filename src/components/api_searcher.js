@@ -1,6 +1,6 @@
 function fetchRoster() {
-    const padres_api = "http://statsapi.mlb.com/api/v1/teams/135/roster";
-    const player_api_template = "http://statsapi.mlb.com"
+    const padres_api = "https://statsapi.mlb.com/api/v1/teams/135/roster";
+    const player_api_template = "https://statsapi.mlb.com"
 
     fetch(padres_api) // fetch the padres roster
         .then(resp => resp.json())
