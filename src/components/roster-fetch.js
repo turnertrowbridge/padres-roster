@@ -2,7 +2,7 @@ function fetchRoster() {
     const padresAPI = "http://statsapi.mlb.com/api/v1/teams/135/roster";
     const playerAPI_template = "http://statsapi.mlb.com"
 
-    fetch(padresAPI) // fetch the padres roster
+    return fetch(padresAPI) // fetch the padres roster
         .then(resp => resp.json())
         .then(result => {
             const rosterPromises = result.roster.map(info => { // search through each player on roster
@@ -16,24 +16,27 @@ function fetchRoster() {
                             primaryNumber: player.primaryNumber,
                             primaryPosition: player.primaryPosition.name,
                             currentAge: player.currentAge,
+                            batAndPitchSide: `${player.batSide.description}/${player.pitchHand.description}`,
                             height: player.height,
                             weight: player.weight,
                             status: player.active ? "Active" : "Inactive",
-                            batAndPitch_side: `${player.batSide.description}/${player.pitchHand.description}`
+                            link: ""
                         }
                         return newPlayer;
                     })
                     .catch(() => console.log('Player Data Fetch Error'));
             });
-            Promise.all(rosterPromises)
-                .then(fetchedRoster => {
-                    console.log(fetchedRoster);
-                    return fetchedRoster;
-                })
+            return Promise.all(rosterPromises);
         })
         .catch(() => console.log('Roster Data Fetch Error'));
 }
 
-fetchRoster();
+// fetchRoster()
+//     .then(roster => {
+//         console.log(roster);
+//     })
+//     .catch(error => {
+//         console.log('Error fetching roster:', error);
+//     });
 
 export default fetchRoster;
