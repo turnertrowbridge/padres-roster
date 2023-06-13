@@ -14,23 +14,23 @@ class App extends Component{
             roster: [],
             searchField: '',
             isFetchingRoster: true,
-            selectedOption: "",
+            selectedTeam: "Padres",
         }
         this.teamID = {
-            padres: 135,
-            team2: 136,
-            team3: 137,
+            Padres: 135,
+            Mariners: 136,
+            Giants: 137,
         }
     }
 
 
     componentDidMount() {
-        fetchRoster(this.teamID.padres)
+        fetchRoster(this.teamID.Padres)
             .then(roster => {
                 this.setState({
                     roster: roster,
                     isFetchingRoster: false,
-                    selectedOption: roster.length > 0 ? roster[0].value : "", // Add this line
+                    selectedTeam: "Padres",
                 });
             })
             .catch(error => {
@@ -42,11 +42,11 @@ class App extends Component{
         this.setState({ searchField: event.target.value })
     }
 
-    handleDropdownChange = (selectedOption) => {
-        const teamID = this.teamID[selectedOption]; // Get the teamID based on the selected option
+    handleDropdownChange = (selectedTeam) => {
+        const teamID = this.teamID[selectedTeam]; // Get the teamID based on the selected option
         fetchRoster(teamID) // Fetch the roster using the selected teamID
             .then((roster) => {
-                this.setState({ roster, selectedOption });
+                this.setState({ roster, selectedTeam });
             })
             .catch((error) => {
                 console.log("Error fetching roster:", error);
@@ -57,9 +57,9 @@ class App extends Component{
         const { roster, searchField, isFetchingRoster } = this.state;
 
         const dropdownOptions = [
-            { value: "padres", label: "Padres" },
-            { value: "team2", label: "Team 2" },
-            { value: "team3", label: "Team 3" },
+            { value: "Padres", label: "Padres" },
+            { value: "Mariners", label: "Mariners" },
+            { value: "Giants", label: "Giants" },
         ];
 
         if (isFetchingRoster) {
@@ -69,19 +69,20 @@ class App extends Component{
             const fullName = player.fullName || "";
             return fullName.toLowerCase().includes(searchField.toLowerCase());
         });
+
         return (
-            <div className='tc'>
-                <h1 className='f1'>2022-2023 Padres Roster</h1>
-                <SearchBox searchChange={this.onSearchChange}/>
-                <Dropdown
-                    options={dropdownOptions}
-                    onSelect={this.handleDropdownChange}
-                />
-                <Scroll>
-                    <ErrorBoundary>
-                        <CardList roster={filteredRoster}/>
-                    </ErrorBoundary>
-                </Scroll>
+            <div className={`tc ${this.state.selectedTeam.toLowerCase()}-theme`}>
+                    <h1 className='f1'>2022-2023 {this.state.selectedTeam} Roster</h1>
+                    <Dropdown
+                        options={dropdownOptions}
+                        onSelect={this.handleDropdownChange}
+                    />
+                    <SearchBox searchChange={this.onSearchChange}/>
+                    <Scroll>
+                        <ErrorBoundary>
+                            <CardList roster={filteredRoster}/>
+                        </ErrorBoundary>
+                    </Scroll>
             </div>
         );
     }

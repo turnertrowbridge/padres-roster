@@ -5,11 +5,50 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: repeating-linear-gradient(to right, #523900, #523900 20px, #ffffff 20px, #FFFFFF 200px);
-  background-size: 100% 60px;
+    background: cornflowerblue;
+}
+
+.padres-theme, .mariners-theme, .giants-theme {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.padres-theme {
+    background-image: repeating-linear-gradient(to right, #523900, #523900 20px, #ffffff 20px, #FFFFFF 200px);
+    background-size: 100% 60px;
+}
+
+.mariners-theme {
+    background: rgb(0,23,91);
+    background: linear-gradient(90deg, rgba(0,23,91,1) 0%, rgba(0,140,207,1) 50%, rgba(0,255,196,1) 100%);
+}
+
+.giants-theme {
+    background: rgb(255,201,0);
+    background: linear-gradient(90deg, rgba(255,201,0,1) 0%, rgba(255,171,0,1) 50%, rgba(255,102,0,1) 100%);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+    font-family: Futura, sans-serif;
+    -webkit-text-stroke: 2px black;
+}
+
+.padres-theme h1 {
+    color: palegoldenrod;
+}
+
+.mariners-theme h1 {
+    color: aqua;
+}
+
+.giants-theme h1 {
+    color: darkorange;
 }

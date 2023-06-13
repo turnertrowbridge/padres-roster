@@ -15,8 +15,8 @@ function Card( {id, fullName, primaryNumber, primaryPosition, currentAge, height
                 <p>Age: {currentAge}</p>
                 <p>B/T: {batAndPitchSide}</p>
                 <p>Height: {height}</p>
-                <p>Weight: {weight}</p>
-                <p>Status: {status}</p>
+                <p>Weight: {weight} lbs</p>
+                {/*<p>Status: {status}</p>*/}
             </div>
         </div>
     );
