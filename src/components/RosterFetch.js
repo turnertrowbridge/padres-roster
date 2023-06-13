@@ -1,5 +1,6 @@
-function fetchRoster() {
-    const padresAPI = "https://statsapi.mlb.com/api/v1/teams/135/roster";
+function fetchRoster(teamID) {
+    // padres 135
+    const padresAPI = `https://statsapi.mlb.com/api/v1/teams/${teamID}/roster`;
     const playerAPI_template = "https://statsapi.mlb.com"
 
     return fetch(padresAPI) // fetch the padres roster

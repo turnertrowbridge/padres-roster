@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function CardList({ roster }) {
+function CardList({ roster, teamID }) {
     return (
         <>
             {
