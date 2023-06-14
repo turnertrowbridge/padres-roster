@@ -77,10 +77,10 @@ class App extends Component{
                         options={dropdownOptions}
                         onSelect={this.handleDropdownChange}
                     />
-                    <SearchBox searchChange={this.onSearchChange}/>
+                    <SearchBox searchChange={this.onSearchChange} selectedTeam={this.state.selectedTeam}/>
                     <Scroll>
                         <ErrorBoundary>
-                            <CardList roster={filteredRoster}/>
+                            <CardList roster={filteredRoster} selectedTeam={this.state.selectedTeam}/>
                         </ErrorBoundary>
                     </Scroll>
             </div>
