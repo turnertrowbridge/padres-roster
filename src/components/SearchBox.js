@@ -12,6 +12,9 @@ function SearchBox({ searchField, searchChange, selectedTeam }) {
         case 'Giants':
             cardClass = 'bg-white';
             break;
+        case 'Rockies':
+            cardClass = 'bg-light-purple';
+            break;
         default:
             cardClass = 'bg-light-yellow';
             break;

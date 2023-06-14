@@ -8,7 +8,7 @@ body {
     background: cornflowerblue;
 }
 
-.padres-theme, .mariners-theme, .giants-theme {
+.padres-theme, .mariners-theme, .giants-theme, .rockies-theme {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,6 +31,11 @@ body {
     background: linear-gradient(90deg, rgba(255,201,0,1) 0%, rgba(255,171,0,1) 50%, rgba(255,102,0,1) 100%);
 }
 
+.rockies-theme {
+    background-image: repeating-linear-gradient(to right, #210052, #320067 20px, #ffffff 20px, #FFFFFF 200px);
+    background-size: 100% 60px;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -51,4 +56,8 @@ h1 {
 
 .giants-theme h1 {
     color: darkorange;
+}
+
+.rockies-theme h1 {
+    color: mediumpurple;
 }

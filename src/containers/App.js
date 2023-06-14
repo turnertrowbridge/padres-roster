@@ -20,6 +20,7 @@ class App extends Component{
             Padres: 135,
             Mariners: 136,
             Giants: 137,
+            Rockies: 115,
         }
     }
 
@@ -60,6 +61,7 @@ class App extends Component{
             { value: "Padres", label: "Padres" },
             { value: "Mariners", label: "Mariners" },
             { value: "Giants", label: "Giants" },
+            { value: "Rockies", label: "Rockies"}
         ];
 
         if (isFetchingRoster) {

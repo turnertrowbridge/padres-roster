@@ -17,6 +17,9 @@ function Card( {id, fullName, primaryNumber, primaryPosition, currentAge, height
         case 'Giants':
             cardClasses = 'bg-white hover-bg-orange';
             break;
+        case 'Rockies':
+            cardClasses = 'bg-light-purple hover-bg-purple'
+            break;
         default:
             cardClasses = 'bg-light-yellow hover-bg-gold';
             break;
