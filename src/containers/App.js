@@ -74,7 +74,7 @@ class App extends Component{
 
         return (
             <div className={`tc ${this.state.selectedTeam.toLowerCase()}-theme`}>
-                    <h1 className='f1'>2022-2023 {this.state.selectedTeam} Roster</h1>
+                    <h1 className='f1'>2022-2023 {this.state.selectedTeam} 40-Man Roster</h1>
                     <Dropdown
                         options={dropdownOptions}
                         onSelect={this.handleDropdownChange}

@@ -14,6 +14,7 @@ function fetchRoster(teamID) {
                         const newPlayer = { // create a player object
                             id: player.id,
                             fullName: player.fullName,
+                            lastName: player.lastName,
                             primaryNumber: player.primaryNumber,
                             primaryPosition: player.primaryPosition.name,
                             currentAge: player.currentAge,

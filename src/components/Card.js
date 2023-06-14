@@ -1,4 +1,4 @@
-function Card( {id, fullName, primaryNumber, primaryPosition, currentAge, height, weight, status, batAndPitchSide, nameSlug, selectedTeam} ){
+function Card( {id, fullName, lastName, primaryNumber, primaryPosition, currentAge, height, weight, status, batAndPitchSide, nameSlug, selectedTeam} ){
     const imgURL = `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${id}/headshot/67/current`
     const link = `https://www.mlb.com/player/${nameSlug}`
     const handleClick = () => {
@@ -36,7 +36,6 @@ function Card( {id, fullName, primaryNumber, primaryPosition, currentAge, height
                 <p>B/T: {batAndPitchSide}</p>
                 <p>Height: {height}</p>
                 <p>Weight: {weight} lbs</p>
-                {/*<p>Status: {status}</p>*/}
             </div>
         </div>
     );
