@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/padres-roster/static/css/main.6324f918.css",
-    "main.js": "/padres-roster/static/js/main.f21d0c2b.js",
-    "static/js/787.fa17bf70.chunk.js": "/padres-roster/static/js/787.fa17bf70.chunk.js",
+    "main.css": "/padres-roster/static/css/main.7cee7848.css",
+    "main.js": "/padres-roster/static/js/main.e8a1fd8b.js",
+    "static/js/787.243317e9.chunk.js": "/padres-roster/static/js/787.243317e9.chunk.js",
     "index.html": "/padres-roster/index.html",
-    "main.6324f918.css.map": "/padres-roster/static/css/main.6324f918.css.map",
-    "main.f21d0c2b.js.map": "/padres-roster/static/js/main.f21d0c2b.js.map",
-    "787.fa17bf70.chunk.js.map": "/padres-roster/static/js/787.fa17bf70.chunk.js.map"
+    "main.7cee7848.css.map": "/padres-roster/static/css/main.7cee7848.css.map",
+    "main.e8a1fd8b.js.map": "/padres-roster/static/js/main.e8a1fd8b.js.map",
+    "787.243317e9.chunk.js.map": "/padres-roster/static/js/787.243317e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6324f918.css",
-    "static/js/main.f21d0c2b.js"
+    "static/css/main.7cee7848.css",
+    "static/js/main.e8a1fd8b.js"
   ]
 }
