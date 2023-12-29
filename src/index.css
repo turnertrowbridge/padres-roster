@@ -8,7 +8,7 @@ body {
     background: cornflowerblue;
 }
 
-.padres-theme, .mariners-theme, .giants-theme, .rockies-theme {
+.padres-theme, .mariners-theme, .giants-theme, .rockies-theme, .dodgers-theme {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,12 @@ body {
     background-size: 100% 60px;
 }
 
+.dodgers-theme {
+    background: rgb(25, 0, 255);
+    background: linear-gradient(90deg, rgb(0, 34, 255) 0%, rgb(255, 255, 255) 50%, rgb(255, 0, 0) 100%);
+}
+
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -60,4 +66,8 @@ h1 {
 
 .rockies-theme h1 {
     color: mediumpurple;
+}
+
+.dodgers-theme h1 {
+    color: white;
 }
